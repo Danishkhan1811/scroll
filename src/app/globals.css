@@ -95,6 +95,20 @@
 }
 
 
+body{
+  background-color: #030023;
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
 /* 
 @layer base {
   :root {
@@ -152,17 +166,3 @@
     --chart-5: 340 75% 55%;
   }
 } */
-
-body{
-  background-color: #030023;
-}
-
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
