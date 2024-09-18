@@ -64,7 +64,7 @@ const PdfRenderer = ({ url }: PdfRendererProps) => {
     setValue("page", String(page))
   }
 
-  return <div className="w-full bg-[#272727] rounded-md shadow flex flex-col items-center">
+  return <div className="w-full bg-teal-500 rounded-md shadow flex flex-col items-center">
     <div className="sm:h-14 h-full w-full flex items-center justify-between px-2">
       <div className="flex items-center gap-1.5">
         <Button

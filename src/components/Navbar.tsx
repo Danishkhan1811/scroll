@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react'
 
 const Navbar = () => {
   return (
-    <nav className='sticky h-14 inset-x-2 top-0 z-30 w-full  bg-[#101010] backdrop-blur-lg transition-all'>
+    <nav className='sticky h-14 inset-x-2 top-0 z-30 w-full backdrop-blur-lg transition-all'>
       <MaxWidthWrapper>
         <div className='flex container h-14 items-center justify-between '>
           <Link
@@ -33,7 +33,7 @@ const Navbar = () => {
               <RegisterLink
                 className={buttonVariants({
                   size: 'sm',
-                })} style={{ background: 'linear-gradient(to right, #3A5BE7, #D6277D)' }}>
+                })} style={{ background: 'linear-gradient(to right, #3A5BE7, #03DACD)' }}>
                   Get started <ArrowRight className='ml-1.5 h-5 2-5'></ArrowRight>
                 </RegisterLink>
             </>
