@@ -20,7 +20,7 @@ const Message = forwardRef<HTMLDivElement, MessageProps>(({ message, isNextMessa
           className={cn(
               'relative flex h-6 w-6 aspect-square items-center justify-center',
               {
-                  'order-2 border border-teal-400  rounded-full':
+                  'order-2 border border-teal-500  rounded-full':
                       message.isUserMessage,
                   'order-1 border rounded-full':
                       !message.isUserMessage,
@@ -28,7 +28,7 @@ const Message = forwardRef<HTMLDivElement, MessageProps>(({ message, isNextMessa
               }
           )}>
           {message.isUserMessage ? (
-              <Icons.user className='fill-teal-400 text-teal-400 h-3/4 w-3/4' />
+              <Icons.user className='fill-teal-500 text-teal-500 h-3/4 w-3/4' />
           ) : (
               <Icons.logo />
           )}
@@ -46,7 +46,7 @@ const Message = forwardRef<HTMLDivElement, MessageProps>(({ message, isNextMessa
           className={cn(
             'px-4 py-2 rounded-3xl inline-block',
             {
-              'bg-teal-400 text-white':
+              'bg-teal-500 text-white':
                 message.isUserMessage,
               'bg-gray-200 text-gray-900':
                 !message.isUserMessage,

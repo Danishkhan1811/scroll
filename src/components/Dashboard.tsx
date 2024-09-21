@@ -53,10 +53,10 @@ const Dashboard = () => {
                     ).map((file) => (
                         <li
                             key={file.id}
-                            className="cursor-pointer col-span-1 divide-y divide-[#494964] bg-indigo-200 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 shadow transition hover:shadow-lg">
+                            className="cursor-pointer col-span-1 border-none divide-y divide-[#494964] bg-indigo-200 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 shadow transition hover:shadow-lg">
                             <Link href={`/dashboard/${file.id}`}>
                                 <div className="pt-6 px-6 flex w-full items-center justify-between space-x-6">
-                                    <div className="h-10 w-10 flex-shrink-0 rounded-full bg-gradient-to-r from-[#3A5BE7] to-[#03DACD]"></div>
+                                    <div className="h-10 w-10 flex-shrink-0 rounded-full bg-gradient-to-r from-[#3A5BE7] to-[#04c6b9]"></div>
                                     <div className="flex-1 truncate">
                                         <div className="flex items-center space-x-3">
                                             <h3 className="truncate text-lg font-medium text-white">

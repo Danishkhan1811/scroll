@@ -125,7 +125,12 @@ export const ChatContextProvider = ({ fileId, children }: Props) => {
                 done = doneReading
                 const chunkValue = decoder.decode(value)
 
-                accResponse += chunkValue
+                // accResponse += chunkValue
+
+                const matches = chunkValue.match(/(?<=")(.*?)(?=")/g);
+                if (matches) {
+                    accResponse += matches.join('');  // Join all matches with a newline
+                }
 
                 // append chunk to the actual message
                 utils.getFileMessages.setInfiniteData(
@@ -163,7 +168,7 @@ export const ChatContextProvider = ({ fileId, children }: Props) => {
                                     })
                                 }
 
-                                return{
+                                return {
                                     ...page,
                                     messages: updatedMessages
                                 }
@@ -172,7 +177,7 @@ export const ChatContextProvider = ({ fileId, children }: Props) => {
                             return page
                         })
 
-                        return {...old, pages: updatedPages}
+                        return { ...old, pages: updatedPages }
                     }
                 )
             }

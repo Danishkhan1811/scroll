@@ -33,7 +33,7 @@ const Navbar = () => {
               <RegisterLink
                 className={buttonVariants({
                   size: 'sm',
-                })} style={{ background: 'linear-gradient(to right, #3A5BE7, #03DACD)' }}>
+                })} style={{ background: 'linear-gradient(to right, #3A5BE7, #04C6B9)' }}>
                   Get started <ArrowRight className='ml-1.5 h-5 2-5'></ArrowRight>
                 </RegisterLink>
             </>

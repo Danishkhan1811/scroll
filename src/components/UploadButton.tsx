@@ -155,10 +155,10 @@ const UploadButton = () => {
                 }
             }}>
             <DialogTrigger onClick={() => setIsOpen(true)} asChild>
-                <Button className="bg-gradient-to-r from-blue-500 to-teal-400 text-white">Upload PDF</Button>
+                <Button className="bg-gradient-to-r from-blue-500 to-teal-500 text-white">Upload PDF</Button>
             </DialogTrigger>
 
-            <DialogContent className="bg-[#252525] text-white border-none outline-none">
+            <DialogContent className="bg-[#030023] text-white border-none outline-none">
                 <UploadDropzone />
             </DialogContent>
         </Dialog>
