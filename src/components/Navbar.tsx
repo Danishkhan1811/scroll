@@ -4,6 +4,7 @@ import { buttonVariants } from './ui/button'
 import { getKindeServerSession, LoginLink, RegisterLink } from '@kinde-oss/kinde-auth-nextjs/server'
 import { ArrowRight } from 'lucide-react'
 import UserAccountNav from './UserAccountNav'
+import MobileNav from './MobileNav'
 
 const Navbar = async () => {
 
@@ -19,6 +20,9 @@ const Navbar = async () => {
             className='flex z-40 font-semibold text-white text-[24px]'>
             <span>Scroll</span>
           </Link>
+
+          <MobileNav isAuth={!!user}/>
+
           <div className='hidden items-center space-x-4 sm:flex text-white'>
             {!user ? <>
               <Link href='/pricing'

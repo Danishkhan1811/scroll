@@ -65,7 +65,7 @@ const BillingForm = ({ subscriptionPlan }: BillingFormProps) => {
             </Button>
 
             {subscriptionPlan.isSubscribed ? (
-              <p className="rounded-full text-xs font-medium">
+              <p className="rounded-full text-xs font-medium text-white">
                 {subscriptionPlan.isCanceled
                   ? "Your plan will be canceled on "
                   : "Your plan renews on "}

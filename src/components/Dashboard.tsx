@@ -8,8 +8,13 @@ import Skeleton from "react-loading-skeleton"
 import { format } from "date-fns"
 import { Button } from "./ui/button"
 import { useState } from "react"
+import { getUserSubscriptionPlan } from "@/lib/stripe"
 
-const Dashboard = () => {
+interface PageProps {
+    subscriptionPlan: Awaited<ReturnType<typeof getUserSubscriptionPlan>>
+}
+
+const Dashboard = ({subscriptionPlan} : PageProps) => {
 
     const [currentlyDeletingFile, setCurrentlyDeletingFile] = useState<string | null>(
         null
@@ -40,7 +45,7 @@ const Dashboard = () => {
                     My Files
                 </h1>
 
-                <UploadButton />
+                <UploadButton isSubscribed={subscriptionPlan.isSubscribed} />
             </div>
 
             {/* display all files of the user*/}
@@ -53,7 +58,7 @@ const Dashboard = () => {
                     ).map((file) => (
                         <li
                             key={file.id}
-                            className="cursor-pointer col-span-1 border-none divide-y divide-[#494964] bg-indigo-200 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 shadow transition hover:shadow-lg">
+                            className="cursor-pointer col-span-1 border-none divide-y divide-[#494964] bg-indigo-200 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 shadow transition hover:shadow-md hover:shadow-teal-400">
                             <Link href={`/dashboard/${file.id}`}>
                                 <div className="pt-6 px-6 flex w-full items-center justify-between space-x-6">
                                     <div className="h-10 w-10 flex-shrink-0 rounded-full bg-gradient-to-r from-[#3A5BE7] to-[#04c6b9]"></div>
