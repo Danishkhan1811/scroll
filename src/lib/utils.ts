@@ -15,8 +15,8 @@ export function absoluteUrl(path: string){
 export function constructMetadata({
   title = "Scroll - Bring your documents to life",
   description = "Scroll - Your intelligent PDF chatbot web app designed to streamline document navigation and enhance your reading experience. With Scroll, you can effortlessly ask questions about your PDFs, summarize content, and locate specific information in seconds.",
-  image = "/thumbnail.png",
-  icons = "/favicon.ico",
+  image = "../../public/thumbnail.png",
+  icons = "../../favicon.ico",
   noIndex = false,
 }: {
   title?: string;
