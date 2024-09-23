@@ -53,13 +53,21 @@ function AuthCallbackPage() {
 
   const { data, isLoading, error } = trpc.authCallback.useQuery(undefined);
 
+  // useEffect(() => {
+  //   if (error?.data?.code === "UNAUTHORIZED") {
+  //     router.push("/sign-in");
+  //   } else if (!isLoading) {
+  //     router.push((data !== undefined && data.success && origin) ? `/${origin}` : "/dashboard");
+  //   }
+  // }, [data, isLoading, error?.data?.code, origin, router]);
+  
   useEffect(() => {
     if (error?.data?.code === "UNAUTHORIZED") {
       router.push("/sign-in");
     } else if (!isLoading) {
       router.push((data !== undefined && data.success && origin) ? `/${origin}` : "/dashboard");
-    }
-  }, [data, isLoading, error?.data?.code, origin, router]);
+    }// eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data, isLoading]);
 
   return (
     <div className="w-full mt-24 flex justify-center text-white">
