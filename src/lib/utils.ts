@@ -15,8 +15,8 @@ export function absoluteUrl(path: string){
 export function constructMetadata({
   title = "Scroll - Bring your documents to life",
   description = "Scroll - Your intelligent PDF chatbot web app designed to streamline document navigation and enhance your reading experience. With Scroll, you can effortlessly ask questions about your PDFs, summarize content, and locate specific information in seconds.",
-  image = "https://github.com/Danishkhan1811/scroll/blob/2e9e1074e1d1b68948ebb2db74ad7c4e8a827b74/public/thumbnail.png",
-  icons = "../../favicon.ico",
+  image = "/thumbnail.png",
+  icons = "/favicon.ico",
   noIndex = false,
 }: {
   title?: string;
@@ -45,7 +45,7 @@ export function constructMetadata({
       creator: "@kainy_onodera",
     },
     icons,
-    metadataBase: new URL("https://pdfpal-next-js.vercel.app/"),
+    metadataBase: new URL("https://scroll-ai.tech/"),
 
     ...(noIndex && {
       robots: {
