@@ -50,7 +50,7 @@ const Dashboard = ({subscriptionPlan} : PageProps) => {
 
             {/* display all files of the user*/}
             {files && files?.length !== 0 ? (
-                <ul className="mt-8 grid grid-cols-1 gap-6 divide-y divide-zinc-200 md:grid-cols-2 lg:grid-cols-3">
+                <ul className="mt-8 grid grid-cols-1 pb-10 gap-6 divide-y divide-zinc-200 md:grid-cols-2 lg:grid-cols-3">
                     {files.sort(
                         (a, b) =>
                             new Date(b.createdAt).getTime() -

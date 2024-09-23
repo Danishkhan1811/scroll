@@ -4,6 +4,7 @@ import { Menu, ArrowRight } from "lucide-react"
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from "react"
 import Link from 'next/link'
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components"
 
 const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
 
@@ -81,11 +82,7 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                                 </li>
                                 <li className='my-3 h-px w-full bg-gray-300' />
                                 <li>
-                                    <Link
-                                        className='flex items-center w-full font-semibold text-white'
-                                        href='/sign-out'>
-                                        Sign out
-                                    </Link>
+                                    <LogoutLink className="flex items-center w-full font-semibold text-white">Log out</LogoutLink>
                                 </li>
                             </>
                         )}
