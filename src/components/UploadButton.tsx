@@ -106,7 +106,7 @@ const UploadDropzone = ({isSubscribed} : {isSubscribed: boolean}) => {
                                     </span> {''}
                                     or drag and drop
                                 </p>
-                                <p className="text-xs text-zinc-300">PDF (up to {isSubscribed ? "64" : "16"}MB )</p>
+                                <p className="text-xs text-zinc-300">PDF (up to {isSubscribed ? "16" : "4"}MB )</p>
                             </div>
 
                             {acceptedFiles && acceptedFiles[0] ? (
