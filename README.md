@@ -1,6 +1,6 @@
 # Scroll - PDF Chatbot Web App
 
-![Scroll Banner](thumbnail.png)
+![Scroll Banner](public/thumbnail.png)
 
 Scroll is a PDF Chatbot Web application built using modern technologies like NextJs, React, Tailwind, tRPC, Prisma, and OpenAI. It allows users to upload PDFs and query them through a chatbot interface.
 
@@ -18,9 +18,10 @@ Scroll is a PDF Chatbot Web application built using modern technologies like Nex
 - **AI Model**: OpenAI API for natural language processing
 - **Database**: Prisma for database management
 
-## Installation
+## Getting Started
 
-1. Clone the repository:
+To get started with this project, run
    ```bash
    git clone https://github.com/DanishKhan1811/scroll.git
-   cd scroll
+   ```
+and copy the .env.example variables into a separate .env file, fill them out & and that's all you need to get started!
